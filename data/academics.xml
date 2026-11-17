@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UniversityAcademicRecords>
+  <University>Meridian International University</University>
+  <Enrolment>
+    <StudentNumber>1001</StudentNumber>
+    <CourseCode>CS101</CourseCode>
+    <CourseName>Introduction to Programming</CourseName>
+  </Enrolment>
+  <Enrolment>
+    <StudentNumber>1002</StudentNumber>
+    <CourseCode>BUS201</CourseCode>
+    <CourseName>Principles of Management</CourseName>
+  </Enrolment>
+  <Enrolment>
+    <StudentNumber>1003</StudentNumber>
+    <CourseCode>CS102</CourseCode>
+    <CourseName>Database Systems</CourseName>
+  </Enrolment>
+  <Enrolment>
+    <StudentNumber>1004</StudentNumber>
+    <CourseCode>COM101</CourseCode>
+    <CourseName>Introduction to Communication</CourseName>
+  </Enrolment>
+  <Enrolment>
+    <StudentNumber>1005</StudentNumber>
+    <CourseCode>BUS202</CourseCode>
+    <CourseName>Business Research Methods</CourseName>
+  </Enrolment>
+</UniversityAcademicRecords>

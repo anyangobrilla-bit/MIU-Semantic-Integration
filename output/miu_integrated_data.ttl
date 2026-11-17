@@ -1,0 +1,211 @@
+@prefix miu: <http://www.miu.ac.ke/ontology/university#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.miu.ac.ke/ontology/university> a owl:Ontology .
+
+miu:admissionDate a owl:DatatypeProperty ;
+    rdfs:domain miu:Student ;
+    rdfs:range xsd:dateTime .
+
+miu:amountPaid a owl:DatatypeProperty ;
+    rdfs:domain miu:FeeRecord ;
+    rdfs:range xsd:decimal .
+
+miu:belongsToDepartment a owl:ObjectProperty ;
+    rdfs:domain miu:Student ;
+    rdfs:range miu:Department .
+
+miu:courseCode a owl:DatatypeProperty ;
+    rdfs:domain miu:Course ;
+    rdfs:range xsd:string .
+
+miu:courseName a owl:DatatypeProperty ;
+    rdfs:domain miu:Course ;
+    rdfs:range xsd:string .
+
+miu:departmentName a owl:DatatypeProperty ;
+    rdfs:domain miu:Department ;
+    rdfs:range xsd:string .
+
+miu:hasDepartment a owl:ObjectProperty ;
+    rdfs:domain miu:University ;
+    rdfs:range miu:Department .
+
+miu:hasEnrolment a owl:ObjectProperty ;
+    rdfs:domain miu:Student ;
+    rdfs:range miu:Enrolment .
+
+miu:hasFeeRecord a owl:ObjectProperty ;
+    rdfs:domain miu:Student ;
+    rdfs:range miu:FeeRecord .
+
+miu:isForCourse a owl:ObjectProperty ;
+    rdfs:domain miu:Enrolment ;
+    rdfs:range miu:Course .
+
+miu:lastName a owl:DatatypeProperty ;
+    rdfs:domain miu:Student ;
+    rdfs:range xsd:string .
+
+miu:offersCourse a owl:ObjectProperty ;
+    rdfs:domain miu:Department ;
+    rdfs:range miu:Course .
+
+miu:outstandingBalance a owl:DatatypeProperty ;
+    rdfs:domain miu:FeeRecord ;
+    rdfs:range xsd:decimal .
+
+<http://www.miu.ac.ke/ontology/university#student/1001> a miu:Student ;
+    miu:admissionDate "2024-01-15T00:00:00"^^xsd:dateTime ;
+    miu:belongsToDepartment <http://www.miu.ac.ke/ontology/university#department/Computing> ;
+    miu:firstName "Mary"^^xsd:string ;
+    miu:hasEnrolment <http://www.miu.ac.ke/ontology/university#enrolment/1001_CS101> ;
+    miu:hasFeeRecord <http://www.miu.ac.ke/ontology/university#feeRecord/1001> ;
+    miu:lastName "Wanjiku"^^xsd:string ;
+    miu:studentID 1001 .
+
+<http://www.miu.ac.ke/ontology/university#student/1002> a miu:Student ;
+    miu:admissionDate "2024-01-16T00:00:00"^^xsd:dateTime ;
+    miu:belongsToDepartment <http://www.miu.ac.ke/ontology/university#department/Business> ;
+    miu:firstName "John"^^xsd:string ;
+    miu:hasEnrolment <http://www.miu.ac.ke/ontology/university#enrolment/1002_BUS201> ;
+    miu:hasFeeRecord <http://www.miu.ac.ke/ontology/university#feeRecord/1002> ;
+    miu:lastName "Kamau"^^xsd:string ;
+    miu:studentID 1002 .
+
+<http://www.miu.ac.ke/ontology/university#student/1003> a miu:Student ;
+    miu:admissionDate "2024-01-18T00:00:00"^^xsd:dateTime ;
+    miu:belongsToDepartment <http://www.miu.ac.ke/ontology/university#department/Computing> ;
+    miu:firstName "Grace"^^xsd:string ;
+    miu:hasEnrolment <http://www.miu.ac.ke/ontology/university#enrolment/1003_CS102> ;
+    miu:hasFeeRecord <http://www.miu.ac.ke/ontology/university#feeRecord/1003> ;
+    miu:lastName "Achieng"^^xsd:string ;
+    miu:studentID 1003 .
+
+<http://www.miu.ac.ke/ontology/university#student/1004> a miu:Student ;
+    miu:admissionDate "2024-01-20T00:00:00"^^xsd:dateTime ;
+    miu:belongsToDepartment <http://www.miu.ac.ke/ontology/university#department/Communication> ;
+    miu:firstName "Peter"^^xsd:string ;
+    miu:hasEnrolment <http://www.miu.ac.ke/ontology/university#enrolment/1004_COM101> ;
+    miu:hasFeeRecord <http://www.miu.ac.ke/ontology/university#feeRecord/1004> ;
+    miu:lastName "Mwangi"^^xsd:string ;
+    miu:studentID 1004 .
+
+<http://www.miu.ac.ke/ontology/university#student/1005> a miu:Student ;
+    miu:admissionDate "2024-01-22T00:00:00"^^xsd:dateTime ;
+    miu:belongsToDepartment <http://www.miu.ac.ke/ontology/university#department/Business> ;
+    miu:firstName "Faith"^^xsd:string ;
+    miu:hasEnrolment <http://www.miu.ac.ke/ontology/university#enrolment/1005_BUS202> ;
+    miu:hasFeeRecord <http://www.miu.ac.ke/ontology/university#feeRecord/1005> ;
+    miu:lastName "Njeri"^^xsd:string ;
+    miu:studentID 1005 .
+
+miu:studentID a owl:DatatypeProperty ;
+    rdfs:domain miu:Student ;
+    rdfs:range xsd:integer .
+
+miu:tuitionFee a owl:DatatypeProperty ;
+    rdfs:domain miu:FeeRecord ;
+    rdfs:range xsd:decimal .
+
+miu:university a miu:University ;
+    miu:hasDepartment <http://www.miu.ac.ke/ontology/university#department/Business>,
+        <http://www.miu.ac.ke/ontology/university#department/Communication>,
+        <http://www.miu.ac.ke/ontology/university#department/Computing> ;
+    miu:universityName "Meridian International University"^^xsd:string .
+
+miu:universityName a owl:DatatypeProperty ;
+    rdfs:domain miu:University ;
+    rdfs:range xsd:string .
+
+<http://www.miu.ac.ke/ontology/university#course/BUS201> a miu:Course ;
+    miu:courseCode "BUS201"^^xsd:string ;
+    miu:courseName "Principles of Management"^^xsd:string .
+
+<http://www.miu.ac.ke/ontology/university#course/BUS202> a miu:Course ;
+    miu:courseCode "BUS202"^^xsd:string ;
+    miu:courseName "Business Research Methods"^^xsd:string .
+
+<http://www.miu.ac.ke/ontology/university#course/COM101> a miu:Course ;
+    miu:courseCode "COM101"^^xsd:string ;
+    miu:courseName "Introduction to Communication"^^xsd:string .
+
+<http://www.miu.ac.ke/ontology/university#course/CS101> a miu:Course ;
+    miu:courseCode "CS101"^^xsd:string ;
+    miu:courseName "Introduction to Programming"^^xsd:string .
+
+<http://www.miu.ac.ke/ontology/university#course/CS102> a miu:Course ;
+    miu:courseCode "CS102"^^xsd:string ;
+    miu:courseName "Database Systems"^^xsd:string .
+
+<http://www.miu.ac.ke/ontology/university#enrolment/1001_CS101> a miu:Enrolment ;
+    miu:isForCourse <http://www.miu.ac.ke/ontology/university#course/CS101> .
+
+<http://www.miu.ac.ke/ontology/university#enrolment/1002_BUS201> a miu:Enrolment ;
+    miu:isForCourse <http://www.miu.ac.ke/ontology/university#course/BUS201> .
+
+<http://www.miu.ac.ke/ontology/university#enrolment/1003_CS102> a miu:Enrolment ;
+    miu:isForCourse <http://www.miu.ac.ke/ontology/university#course/CS102> .
+
+<http://www.miu.ac.ke/ontology/university#enrolment/1004_COM101> a miu:Enrolment ;
+    miu:isForCourse <http://www.miu.ac.ke/ontology/university#course/COM101> .
+
+<http://www.miu.ac.ke/ontology/university#enrolment/1005_BUS202> a miu:Enrolment ;
+    miu:isForCourse <http://www.miu.ac.ke/ontology/university#course/BUS202> .
+
+<http://www.miu.ac.ke/ontology/university#feeRecord/1001> a miu:FeeRecord ;
+    miu:amountPaid 50000.0 ;
+    miu:outstandingBalance 0.0 ;
+    miu:tuitionFee 50000.0 .
+
+<http://www.miu.ac.ke/ontology/university#feeRecord/1002> a miu:FeeRecord ;
+    miu:amountPaid 40000.0 ;
+    miu:outstandingBalance 20000.0 ;
+    miu:tuitionFee 60000.0 .
+
+<http://www.miu.ac.ke/ontology/university#feeRecord/1003> a miu:FeeRecord ;
+    miu:amountPaid 30000.0 ;
+    miu:outstandingBalance 20000.0 ;
+    miu:tuitionFee 50000.0 .
+
+<http://www.miu.ac.ke/ontology/university#feeRecord/1004> a miu:FeeRecord ;
+    miu:amountPaid 55000.0 ;
+    miu:outstandingBalance 0.0 ;
+    miu:tuitionFee 55000.0 .
+
+<http://www.miu.ac.ke/ontology/university#feeRecord/1005> a miu:FeeRecord ;
+    miu:amountPaid 45000.0 ;
+    miu:outstandingBalance 15000.0 ;
+    miu:tuitionFee 60000.0 .
+
+miu:firstName a owl:DatatypeProperty ;
+    rdfs:domain miu:Student ;
+    rdfs:range xsd:string .
+
+<http://www.miu.ac.ke/ontology/university#department/Communication> a miu:Department ;
+    miu:departmentName "Communication"^^xsd:string .
+
+miu:University a owl:Class .
+
+<http://www.miu.ac.ke/ontology/university#department/Business> a miu:Department ;
+    miu:departmentName "Business"^^xsd:string .
+
+<http://www.miu.ac.ke/ontology/university#department/Computing> a miu:Department ;
+    miu:departmentName "Computing"^^xsd:string .
+
+miu:Department a owl:Class .
+
+miu:Enrolment a owl:Class .
+
+miu:Course a owl:Class .
+
+miu:FeeRecord a owl:Class .
+
+miu:Student a owl:Class .
+
+[] a owl:AllDisjointProperties ;
+    owl:members ( miu:firstName ) .
+

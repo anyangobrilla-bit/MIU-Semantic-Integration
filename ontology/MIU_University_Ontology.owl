@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2026/10/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2026/10/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.miu.ac.ke/ontology/university"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#belongsToDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.miu.ac.ke/ontology/university#belongsToDepartment">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Student"/>
+        <rdfs:range rdf:resource="http://www.miu.ac.ke/ontology/university#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#hasDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.miu.ac.ke/ontology/university#hasDepartment">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#University"/>
+        <rdfs:range rdf:resource="http://www.miu.ac.ke/ontology/university#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#hasEnrolment -->
+
+    <owl:ObjectProperty rdf:about="http://www.miu.ac.ke/ontology/university#hasEnrolment">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Student"/>
+        <rdfs:range rdf:resource="http://www.miu.ac.ke/ontology/university#Enrolment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#hasFeeRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.miu.ac.ke/ontology/university#hasFeeRecord">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Student"/>
+        <rdfs:range rdf:resource="http://www.miu.ac.ke/ontology/university#FeeRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#isForCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.miu.ac.ke/ontology/university#isForCourse">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Enrolment"/>
+        <rdfs:range rdf:resource="http://www.miu.ac.ke/ontology/university#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#offersCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.miu.ac.ke/ontology/university#offersCourse">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Department"/>
+        <rdfs:range rdf:resource="http://www.miu.ac.ke/ontology/university#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#admissionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#admissionDate">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#amountPaid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#amountPaid">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#FeeRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#courseCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#courseCode">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#courseName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#courseName">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#departmentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#departmentName">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Department"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#firstName">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.miu.ac.ke/ontology/university#firstName"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#lastName">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#outstandingBalance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#outstandingBalance">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#FeeRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#studentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#studentID">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#tuitionFee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#tuitionFee">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#FeeRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#universityName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.miu.ac.ke/ontology/university#universityName">
+        <rdfs:domain rdf:resource="http://www.miu.ac.ke/ontology/university#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#Course -->
+
+    <owl:Class rdf:about="http://www.miu.ac.ke/ontology/university#Course"/>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#Department -->
+
+    <owl:Class rdf:about="http://www.miu.ac.ke/ontology/university#Department"/>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#Enrolment -->
+
+    <owl:Class rdf:about="http://www.miu.ac.ke/ontology/university#Enrolment"/>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#FeeRecord -->
+
+    <owl:Class rdf:about="http://www.miu.ac.ke/ontology/university#FeeRecord"/>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#Student -->
+
+    <owl:Class rdf:about="http://www.miu.ac.ke/ontology/university#Student"/>
+    
+
+
+    <!-- http://www.miu.ac.ke/ontology/university#University -->
+
+    <owl:Class rdf:about="http://www.miu.ac.ke/ontology/university#University"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
